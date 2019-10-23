@@ -1,0 +1,9 @@
+.item-open{
+  background-color: green;
+}
+.item-closed{
+  background-color: grey;
+}
+.item-unknown{
+  background-color: red;
+}

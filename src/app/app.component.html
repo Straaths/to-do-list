@@ -1,0 +1,17 @@
+<div style="text-align:center">
+  <h1>
+    Welcome to {{title}}!
+  </h1>
+  <div>
+    <h2>Add new item:</h2>
+    <input [(ngModel)]="nextItem.title">
+    <select [(ngModel)]="nextItem.status">
+      <option *ngFor="let status of statuses" [value]="status.value">{{status.value}}</option>
+    </select>
+    <button (click)="addItem($event)">Add</button>
+  </div>
+  <div>
+    <h2>Items:</h2>
+    <app-item *ngFor="let item of items" [item]="item" (remove)="removeItem($event)"></app-item>
+  </div>
+</div>
